@@ -1,0 +1,1136 @@
+small = 'screen and (max-width: 360px)'
+small_2 = 'screen and (max-width: 480px)'
+small_3 = 'screen and (max-width: 640px)'
+medium = 'screen and (max-width: 767px)'
+large = 'screen and (max-width: 992px)' 
+mlarge = 'screen and (max-width: 1024px)' 
+xlarge = 'screen and (max-width: 1200px)'
+ipad = 'screen and (min-width: 768px) and (max-width: 1024px)'
+
+/** mixin */
+border-radius(n)
+  -webkit-border-radius n
+  -moz-border-radius n
+  border-radius n
+
+
+/**structure*/
+body 
+	font bold 14px "Helvetica" 
+#header 
+	min-height 95px
+	background-color white
+	position fixed
+	top 0
+	z-index 999 
+	width 100% 
+	display block 
+	box-shadow 0 1px 5px #f5f5f5
+	nav
+		.bd-menu 
+			display none
+			float right 
+			span 
+				font-size 30px
+				line-height 90px
+				margin-right 10px
+				cursor pointer 
+		.bd-logo
+			float left
+			line-height 95px
+			padding-left 20px
+			img 
+				width 100%
+		ul
+			float right
+			list-style none
+			margin 0
+			li
+				float left
+				line-height 65px
+				padding 0 10px
+				a
+					color #333
+					text-transform uppercase
+					margin-top 30px
+					display inline-block
+					font-family "texgyreherosregular"
+					font-weight normal
+				&.bd-active, &:hover
+					background-color #99CC33
+					color #333		
+		.bd-signup
+			float right
+			span
+				border 2px solid #99CC33
+				display inline-block
+				margin 43px 29px 0 25px 
+				border-radius(5px) 
+				a
+					padding 10px 30px
+					text-transform uppercase
+					display inline-block
+					color #333
+					font-weight bolder
+					&:after
+						display inline-block
+						
+#banner
+	min-height 700px
+	background rgb(0,0,0) url("../images/background.png") center top no-repeat
+	background-size 100% 100%
+	position relative
+	text-align center
+	color rgb(255, 255, 255)
+	margin-top 95px 
+	.bd-text-banner 
+		position relative
+		display inline-block
+		padding 0 50px 
+		h1 
+			margin 0
+			font-family "texgyreherosregular"
+			font-size 65px
+			padding-top 70px
+			font-weight normal
+		p 
+			padding 25px 120px
+			text-align: center;
+			font-size 22px
+			br 
+				display inline-block
+	.bd-play
+		display inline-block
+		clear both
+		span 
+			width 210px
+			height 210px
+			display inline-block
+			border-radius 100%
+			border 2px solid #FFF
+			background-color rgba(255, 255, 255, 0.35)
+			cursor pointer
+			i
+				font-size 100px
+				text-align center
+				margin-top 50px
+			&:hover 
+				background-color rgba(255, 255, 255, 0.15) 
+				border-radius 100%
+	.bd-download
+		display block
+		clear both
+		a 
+			border 2px solid #99CC33
+			background-color #FFF
+			color #99CC33 
+			font-size 32px
+			font-family "texgyreherosregular"
+			display inline-block 
+			clear both
+			text-transform uppercase
+			padding 10px 30px
+			margin-top 30px
+			border-radius 20px
+			text-decoration none 
+			&:hover
+				background-color #99CC33
+				color #FFF  
+	.bd-font-normal
+		font-weight normal				
+#work-us
+	min-height 790px	
+	.bd-title
+		padding 30px 0
+		margin-bottom 40px 
+		h1
+			text-transform uppercase
+			color #6F7885
+			text-align center
+			display block
+			width 100%
+			position relative
+			padding 10px 0 20px 0
+			font-size 45px
+			font-family "texgyreherosregular"
+			&:after
+				background #99CC33
+				bottom 0
+				content ""
+				height 4px	
+				width 135px
+				position absolute
+				margin 0 auto
+				left 0
+				right 0
+	h2 
+		color #6F7885
+		font-size 22px
+		font-family "texgyreherosregular"
+		text-align center 
+		padding-bottom 20px;
+	.container 
+		.row
+			.col-sm-3
+				text-align center
+				position relative
+				span 
+					display inline-block
+					width 188px
+					height 188px
+					background-color #F6F6F6
+					border-radius(100%)	
+				&:after
+					content ""
+					width 35px
+					height 300px
+					position absolute 
+					background url("../images/arrow-right.png") center center no-repeat
+					top 0
+					right -15px
+				p
+					color #6F7885
+					font-size 18px	
+					font-family "texgyreherosregular"
+					text-align center 
+					padding 20px 40px
+					opacity 1
+					font-weight normal
+					line-height 23px
+					margin-top 50px	
+			.bd-last
+				&:after
+					background-image none	
+#benefice
+	min-height 750px 
+	border-top 1px solid #DDDDDD 
+	.bd-title
+		padding 30px 0
+		margin-bottom 40px 
+		h1
+			text-transform uppercase
+			color #6F7885
+			text-align center
+			display block
+			width 100%
+			position relative
+			padding 10px 0 20px 0
+			font-size 45px
+			font-family "texgyreherosregular"
+			&:after
+				background #99CC33
+				bottom 0
+				content ""
+				height 4px	
+				width 135px
+				position absolute
+				margin 0 auto
+				left 0
+				right 0				
+	.db-center
+		text-align center
+		img 
+			margin-top 50px
+	.bd-list-beneficies
+		list-style none
+		li
+			display block
+			clear both
+			margin-bottom 20px
+			overflow hidden
+			.bd-left
+				float left 
+				width 30%
+				margin-right 10%
+				span
+					display inline-block
+					width 150px
+					height 150px
+					background-color #F6F6F6 
+					border-radius(100%)	
+					text-align center 
+					line-height 150px
+					img 
+						width 100%	
+			.bd-right 
+				float left
+				width 60% 
+				h2, p
+					color #6F7885
+					font-family "texgyreherosregular"
+					font-weight normal
+				h2 
+					font-size 32px
+					text-transform uppercase
+				p 
+					font-size 18px
+					
+#time
+	min-height 750px 
+	border-top 1px solid #F6F6F6 
+	background-color #F6F6F6
+	.bd-title
+		padding 30px 0
+		margin-bottom 40px 
+		h1
+			text-transform uppercase
+			color #6F7885
+			text-align center
+			display block
+			width 100%
+			position relative
+			padding 10px 0 20px 0
+			font-size 45px
+			font-family "texgyreherosregular"
+			&:after
+				background #99CC33
+				bottom 0
+				content ""
+				height 4px	
+				width 400px
+				position absolute
+				margin 0 auto
+				left 0
+				right 0		
+	.bd-moment
+		text-align center
+		margin-bottom 100px 
+		position relative 
+		img 
+			width 90%
+		.bd-rollover 
+			background-color #99CC33
+			width 90% 
+			height 100%  
+			margin 0 auto 
+			top 0 
+			left 0 
+			right 0 
+			bottom 0 
+			position absolute 
+			opacity 0 
+			-webkit-transition all 0.5s ease-out 0s
+			-moz-transition all 0.5s ease-out 0s
+			-o-transition all 0.5s ease-out 0s
+			-ms-transition all 0.5s ease-out 0s
+			transition all 0.5s ease-out 0s 
+			span 
+				color #FFF 
+				text-align center 
+				padding 80px 40px 50px 40px 
+				line-height 30px 
+				font-size 26px 
+				font-weight normal 
+				display inline-block 
+				vertical-align middle 
+				font-family "texgyreherosregular" 
+		&:hover
+			.bd-rollover 
+				opacity 1 
+				
+				-webkit-transition all 0.5s ease-in 0s 
+				-moz-transition all 0.5s ease-in 0s 
+				-o-transition all 0.5s ease-in 0s 
+				-ms-transition all 0.5s ease-in 0s 
+				transition all 0.5s ease-in 0s 
+		&:hover
+			img 
+				-webkit-transform scale(0) 
+				-moz-transform scale(0) 
+				-o-transform scale(0) 
+				-ms-transform scale(0) 
+				transform scale(0) 
+				-ms-filter "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)" 
+				opacity 0 
+				-webkit-transition-delay 0s 
+				-moz-transition-delay 0s 
+				-o-transition-delay 0s 
+				-ms-transition-delay 0s 
+				transition-delay 0s
+#app
+	.bd-title
+		padding 30px 0 10px 0
+		margin-bottom 0px 
+		h1
+			text-transform uppercase
+			color #6F7885
+			text-align left
+			display block
+			position relative
+			padding 10px 0 20px 0px
+			font-size 45px
+			font-family "texgyreherosregular"
+			margin-bottom 0
+	p 
+		font-family "texgyreherosregular"
+		color #6F7885
+		text-align left
+		display block
+		position relative
+	.bd-download-app 
+		float left
+		margin 50px 10px 200px 0
+		display inline-block
+		.bd-app-store 
+			width 125px
+			height 43px
+			display inline-block
+			background url("../images/store_icons.png") 0 0 no-repeat
+		.bd-google-play
+			width 125px
+			height 43px 
+			display inline-block
+			background url("../images/store_icons.png") -128px 0 no-repeat	
+#footer
+	min-height 300px
+	background-color #333
+	padding-top 30px		
+	.bd-footer-socials
+		list-style none
+		padding 0
+		margin 0
+		li
+			float left
+			margin-right 5px
+			width 36px
+			height 36px
+			display block
+			background-color #FFFFFF
+			border-radius(5px)
+			a
+				text-align center
+				line-height 32px
+				display block
+	h3 
+		color #FFFFFF
+		margin 0
+		padding 0
+		font-family "texgyreherosregular"
+	ul
+		list-style none
+		padding 0
+		margin 20px 0 0 0
+		li 
+			margin-bottom 10px 
+			a 
+				color #FFFFFF
+				font-family "texgyreherosregular"
+				font-weight normal
+.modal-body
+	img 
+		width 100% 
+.modal-dialog
+	z-index 9999!important
+	
+@media ipad 
+	.container 
+		width 100%
+		margin 0%
+		padding 0
+		.row 
+			margin 0
+	#header
+		.container 
+			margin 0
+			padding 0
+		nav 
+			.bd-logo 
+				width 30%!important
+				padding-left 1%!important
+			ul 
+				margin 0
+				padding 0
+				li 
+					padding-left 8px 
+					padding-right 8px 
+			.bd-signup 
+				margin 0 10px
+				span 
+					display inline-block
+					margin 49px 5px 0 0px
+					a 
+						padding 5% 10%
+						font-size 12px
+						font-weight normal 
+						display inline-block
+	#work-us 
+		min-height 600px
+		.container
+			.row
+				.col-sm-3
+					h2 
+						min-height 70px
+						margin-bottom 0px
+				.col-sm-3:after 
+					background-image none 
+					display none
+					
+						
+@media mlarge
+	#header
+		.container 
+			padding 0
+			.row 
+				.container-fluid
+					padding 0
+		nav 
+			.bd-logo 
+				padding-left 0
+				margin-left 0
+				width 35%
+				img 
+					width 100%
+	#banner 
+		min-height 550px!important
+		background-size inherit
+		background-postion center top
+	#time
+		.db-moment
+			.db-rollover 
+				span 
+					font-size 18px
+					padding 0px 15px 20px 15px 
+					line-height 26px
+				
+@media large
+	#header
+		.container 
+			padding 0
+			.row 
+				.container-fluid
+					padding 0
+		nav 
+			.bd-logo 
+				padding-left 0
+				margin-left 0
+				width 35%
+				img 
+					width 100%
+	#banner 
+		min-height 550px!important
+		background-size inherit
+		background-postion center top
+		
+@media medium 
+	.row 
+		margin-right 0
+		margin-left 0
+	#header
+		.container 
+			padding 0
+			.row 
+				.container-fluid
+					padding 0
+		nav 
+			.bd-menu
+				display block
+			.bd-logo 
+				padding-left 0
+				margin-left 10px	
+			.bd-signup, ul
+				width 100%
+				display none
+			.bd-signup 
+				border-top 1px solid #CCCCCC
+				text-align center
+				span 
+					margin 25px auto
+			ul 
+				margin-left 0
+				padding-left 0
+				li 
+					width 100%
+					line-height 30px			
+					border-top 1px solid #DDDDDD
+					a 
+						margin 10px 0
+	#banner 
+		min-height 100px!important
+		background-size inherit
+		background-postion center top		
+		.bd-text-banner 
+			padding 0px!important	
+	#banner 
+		min-height 100px!important
+		background-size inherit
+		background-postion center top  
+		.bd-text-banner 
+			padding 0px!important
+			h1 
+				padding-top 20px!important
+				font-size 40px
+			.bd-play 
+				span 
+					width 120px 
+					height 120px
+					i 
+						font-size 50px
+						margin-top 30px
+			p 
+				font-size 16px
+				padding 15px 10px
+				font-weight normal 
+			.bd-download 
+				a 
+					font-size 20px
+			.bd-font-normal 
+				font-size 14px				
+	#work-us, #time, #benefice, #app
+		.bd-title
+			h1
+				font-size 26px
+				padding-top 20px
+	#work-us 
+		.container 
+			.row 
+				.col-sm-3 
+					span 
+						width 130px
+						height 130px
+						img 
+							width 100%
+							margin-top 0px
+					&:after
+						background-image none
+					p 
+				    	margin-bottom 50px
+				    	margin-top 10px
+				    	padding 0 0 20px
+				    	font-size 16px
+			
+	#benefice 
+		.bd-title
+			margin-bottom 20px
+			padding-bottom 10px		
+		.bd-list-beneficies
+			margin 0 
+			padding 0
+			li
+				margin-bottom 40px
+				.bd-left, .bd-right 
+					width 100%
+				.bd-left 
+					text-align center
+				.bd-right
+					text-align center 
+					h2 
+						font-size 20px
+						margin-top 10px
+					p
+						font-size 16px 
+		.bd-list-beneficies
+			li
+				.bd-right
+					h2 
+						font-size 20px
+						margin-top 10px
+					p
+						font-size 16px 
+		.container 
+			.row
+				.col-sm-6 
+					.db-center
+						img 
+							width 100%
+	#footer 
+		.bd-footer-socials 
+			overflow hidden	
+			margin-bottom 30px
+		.row
+			.col-sm-10
+				padding 0
+				margin 0
+		.row
+			h3
+				padding 0
+				margin 10px 0 0 0
+				font-size 20px
+			ul
+				margin 0 0 20px 0
+				li 
+					a 
+						font-weight normal
+						font-size 14px
+
+
+	/*
+	.row 
+		margin-right 0
+		margin-left 0
+	#work-us, #time, #benefice, #app
+		.bd-title
+			h1
+				font-size 30px
+	#header
+		.container 
+			padding 0
+			.row 
+				.container-fluid
+					padding 0
+		nav 
+			.bd-logo 
+				padding-left 0
+				margin-left 1%
+				width 35%
+				img 
+					width 100%
+			.bd-signup
+				display none		
+	#banner 
+		min-height 250px!important	
+		background-size inherit
+		background-postion center top
+		.bd-text-banner 
+			padding 0px!important
+			h1 
+				padding-top 20px!important
+				font-size 46px
+			p 
+				padding 10px 
+				font-size 18px 
+				br 
+					display none 
+	#work-us 
+		min-height 600px
+		.container
+			.bd-title 
+				margin-bottom 20px 
+			.row
+				.col-sm-3
+					h2 
+						margin 0
+						padding 0
+						min-height 60px						
+					span
+						width 130px
+						height 130px 
+						img 
+							width 80%
+							margin-top 15px	
+					p 
+						padding 0
+						font-size 16px				
+				.col-sm-3:after 
+					background-image none 
+	#benefice 
+		.bd-list-beneficies
+			margin 0
+			padding 0
+			li
+				.bd-left
+					width 35%
+					margin-right 5%
+					span 
+						width 120px 
+						height 120px 
+						line-height 120px
+						img 
+							width 75%
+							margin-top 0
+							padding-top 0
+				.bd-right 
+					width 60%
+					h2 
+						margin-top 0 
+						font-size 20px 
+					p 
+						font-size 16px
+	#benefice-img
+		img 
+			width 100%
+	
+	#time
+		.db-moment
+			margin-bottom 50px
+			.db-rollover 
+				background-color #99CC33
+				span 
+					font-size 18px
+					padding 10px 10px 10px 10px
+					line-height 20px 
+	.bd-rollover 
+		span 
+			padding 20px 10px 10px 10px!important 
+			font-size 18px!important
+			line-height 140%!important 
+	#footer 
+		min-height 200px
+		.bd-footer-socials 
+			overflow hidden	
+			margin-bottom 30px
+		.row
+			.col-sm-10
+				padding 0
+				margin 0
+		.row
+			h3
+				padding 0
+				margin 10px 0 10px 0
+				font-size 16px
+			ul
+				margin 0 0 20px 0
+				li 
+					a 
+						font-weight normal
+						font-size 12px
+						color #999999
+	*/
+	.modal-content
+		iframe 
+			width 100%!important 
+			height 350px!important
+@media small_3 
+	.row 
+		margin-right 0
+		margin-left 0
+	#header
+		.container 
+			padding 0
+			.row 
+				.container-fluid
+					padding 0
+		nav 
+			.bd-menu
+				display block
+			.bd-logo 
+				padding-left 0
+				margin-left 10px	
+			.bd-signup, ul
+				width 100%
+				display none
+			.bd-signup 
+				border-top 1px solid #CCCCCC
+				text-align center
+				span 
+					margin 25px auto
+			ul 
+				margin-left 0
+				padding-left 0
+				li 
+					width 100%
+					line-height 30px			
+					border-top 1px solid #DDDDDD
+					a 
+						margin 10px 0
+	#banner 
+		min-height 100px!important
+		background-size inherit
+		background-postion center top		
+		.bd-text-banner 
+			padding 0px!important			
+	#work-us, #time, #benefice, #app
+		.bd-title
+			h1
+				font-size 26px
+				padding-top 20px
+	#work-us 
+		.container 
+			.row 
+				.col-sm-3 
+					span 
+						width 130px
+						height 130px
+						img 
+							width 100%
+							margin-top 0px
+					&:after
+						background-image none
+					p 
+				    	margin-bottom 50px
+				    	margin-top 10px
+				    	padding 0 0 20px
+				    	font-size 16px
+			
+	#benefice 
+		.bd-list-beneficies
+			li
+				.bd-right
+					h2 
+						font-size 20px
+						margin-top 10px
+					p
+						font-size 16px 
+	#footer 
+		.bd-footer-socials 
+			overflow hidden	
+			margin-bottom 30px
+		.row
+			.col-sm-10
+				padding 0
+				margin 0
+		.row
+			h3
+				padding 0
+				margin 10px 0 0 0
+				font-size 20px
+			ul
+				margin 0 0 20px 0
+				li 
+					a 
+						font-weight normal
+						font-size 14px
+@media small_2 
+	.row 
+		margin-right 0
+		margin-left 0
+	#header
+		.container 
+			padding 0
+			.row 
+				.container-fluid
+					padding 0
+		nav 
+			.bd-menu
+				display block
+			.bd-logo 
+				padding-left 0
+				margin-left 10px	
+				width 60%
+				img 
+					width 100%
+			.bd-signup, ul
+				width 100%
+				display none
+			.bd-signup 
+				border-top 1px solid #CCCCCC
+				text-align center
+				span 
+					margin 25px auto
+			ul 
+				margin-left 0
+				padding-left 0
+				li 
+					width 100%
+					line-height 30px			
+					border-top 1px solid #DDDDDD
+					a 
+						margin 10px 0
+	#banner 
+		min-height 100px!important
+		background-size inherit
+		background-postion center top  
+		.bd-text-banner 
+			padding 0px!important	
+			.bd-play 
+				span 
+					width 120px 
+					height 120px
+					i 
+						font-size 50px
+						margin-top 30px			
+	#work-us, #time, #benefice, #app
+		.bd-title
+			h1
+				font-size 26px
+				padding-top 20px
+	#work-us 
+		.container 
+			.row 
+				.col-sm-3 
+					span 
+						width 188px
+						height 188px 
+						img 
+							width 100%
+							margin-top 0px
+					p 
+				    	margin-bottom 50px
+				    	margin-top 10px
+				    	padding 0 0 20px
+				    	font-size 16px
+	#benefice 
+		.bd-list-beneficies
+			margin 0 
+			padding 0	
+			li
+				.bd-right
+					h2 
+						font-size 20px
+						margin-top 10px
+					p
+						font-size 16px 
+	#time 
+		.bd-title 
+			margin-bottom 10px
+			h1:after
+				width 200px
+				
+		.bd-moment 
+			margin-bottom 30px
+			img
+				 width 100% 	
+			.bd-rollover					
+				width 100%
+				span 
+					font-size 24px 
+					line-height 26px
+					padding 40px 10px 10px 10px 					
+	#footer 
+		.bd-footer-socials 
+			overflow hidden	
+			margin-bottom 30px
+		.row
+			.col-sm-10
+				padding 0
+				margin 0
+		.row
+			h3
+				padding 0
+				margin 10px 0 0 0
+				font-size 20px
+			ul
+				margin 0 0 20px 0
+				li 
+					a 
+						font-weight normal
+						font-size 14px
+	.modal-content
+		iframe 
+			width 100%!important 
+			height 250px!important
+@media small 
+	.row 
+		margin-right 0
+		margin-left 0
+	#header
+		.container 
+			padding 0
+			.row 
+				.container-fluid
+					padding 0
+		nav 
+			.bd-menu
+				display block
+			.bd-logo 
+				padding-left 0
+				margin-left 10px
+				width 60%
+				img 
+					width 100%
+			.bd-signup, ul
+				width 100%
+				display none
+			.bd-signup 
+				border-top 1px solid #CCCCCC
+				text-align center
+				span 
+					margin 25px auto
+			ul 
+				margin-left 0
+				padding-left 0
+				li 
+					width 100%
+					line-height 30px			
+					border-top 1px solid #DDDDDD
+					a 
+						margin 10px 0
+	#banner 
+		min-height 100px!important
+		background-size inherit
+		background-postion center top  
+		.bd-text-banner 
+			padding 0px!important
+			h1 
+				padding-top 20px!important
+				font-size 40px
+			.bd-play 
+				span 
+					width 120px 
+					height 120px
+					i 
+						font-size 50px
+						margin-top 30px
+			p 
+				font-size 16px
+				padding 15px 10px
+				font-weight normal 
+			.bd-download 
+				a 
+					font-size 20px
+			.bd-font-normal 
+				font-size 14px
+	#work-us, #time, #benefice, #app
+		.bd-title
+			h1
+				font-size 26px
+				padding-top 20px
+	#work-us 
+		.container 
+			.row 
+				.col-sm-3 
+					span 
+						width 188px
+						height 188px 
+						img 
+							width 100%
+							margin-top 0px
+					p 
+				    	margin-bottom 50px
+				    	margin-top 10px
+				    	padding 0 0 20px
+				    	font-size 16px
+	#benefice 
+		.bd-title
+			margin-bottom 20px
+			padding-bottom 10px		
+		.bd-list-beneficies
+			margin 0 
+			padding 0
+			li
+				margin-bottom 40px
+				.bd-left, .bd-right 
+					width 100%
+				.bd-left 
+					text-align center
+				.bd-right
+					text-align center 
+					h2 
+						font-size 20px
+						margin-top 10px
+					p
+						font-size 16px 
+		.container 
+			.row
+				.col-sm-6 
+					.db-center
+						img 
+							width 100%
+	#time 
+		.bd-title 
+			margin-bottom 10px
+			h1:after
+				width 200px
+				
+		.bd-moment 
+			margin-bottom 30px
+			img
+				 width 100% 	
+			.bd-rollover					
+				width 100%
+				span 
+					font-size 18px 
+					line-height 20px
+					padding 20px 10px 10px 10px
+	#app 
+		min-height 100px
+		.bd-download-app
+			margin-bottom 60px				
+	#footer 
+		.bd-footer-socials 
+			overflow hidden	
+			margin-bottom 30px
+		.row
+			.col-sm-10
+				padding 0
+				margin 0
+		.row
+			h3
+				padding 0
+				margin 10px 0 0 0
+				font-size 20px
+			ul
+				margin 0 0 20px 0
+				li 
+					a 
+						font-weight normal
+						font-size 14px
