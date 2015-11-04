@@ -16,7 +16,7 @@
 				<div class="container-fluid">
 					<nav>
 						<div class="bd-logo">
-							<img src="images/brands_bondrink_big.png" alt="Logo Bon Drink">
+							<img src="images/logo.jpg" alt="Logo BonDrink">
 						</div>
 						<div class="bd-menu">
 							<span class="glyphicon glyphicon-menu-hamburger"></span>
@@ -25,9 +25,9 @@
 							<span><a href="#">INGRESAR</a></span>
 						</div>
 						<ul id="nav">
-							<li class="bd-active"><a href="#" class="home">Home</a></li>
-							<li><a href="#" class="work-us">¿Cómo funciona?</a></li>
-							<li><a href="#">Trabaja con nosotros</a></li>
+							<li class=" bd-active"><a href="#banner" class="smoothScroll">Home</a></li>
+							<li><a href="#work-us" class="smoothScroll">¿Cómo funciona?</a></li>
+							<li><a href="#benefice" class="smoothScroll">Trabaja con nosotros</a></li>
 						</ul>
 						
 					</nav>
@@ -35,8 +35,7 @@
 			</div>
 		</div>
 	</section>
-	<section id="banner">
-		<a></a>
+	<section id="banner" class="sections">
 		<div class="container">
 			<div class="bd-text-banner">
 				<h1>Pide tu bebida desde tu móvil</h1>
@@ -53,10 +52,9 @@
 				</div>
 				<p class="bd-font-normal">Pronto en Cuzco y en Trujillo</p>			
 			</div>
-			
 		</div>
 	</section>
-	<section id="work-us">
+	<section id="work-us" class="sections">
 		<div class="container">
 			<div class="bd-title">
 				<h1>¿Cómo funciona?</h1>
@@ -95,7 +93,7 @@
 			</div>
 		</div>
 	</section>
-	<section id="benefice">
+	<section id="benefice" class="sections">
 		<div class="container">
 			<div class="bd-title">
 				<h1>Beneficios</h1>
@@ -146,7 +144,7 @@
 			</div>
 		</div>
 	</section>
-	<section id="time">
+	<section id="time" class="sections">
 		<div class="container">
 			<div class="bd-title">
 				<h1>BonDrink para toda ocasión</h1>
@@ -183,7 +181,7 @@
 			</div>
 		</div>
 	</section>
-	<section id="app">
+	<section id="app" class="sections">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6">
@@ -288,6 +286,8 @@
 	</div>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.smooth-scroll.min.js"></script>
+	<script src="js/waypoints.min.js"></script>
 	<script type="text/javascript">
 		// YOUTUBE CODE
 		//////////////////////
@@ -341,6 +341,7 @@
 				displayingVideo = false;
 				stopVideo();
 			});
+			/*
 			$(".work-us").click(function(e){
 				//e.preventDefault();
 				$("#nav li").removeClass('bd-active');
@@ -357,6 +358,24 @@
 			    }, 1000);
 				$(this).parent("li").addClass('bd-active');
 			});
+			*/
+			$('a.smoothScroll').smoothScroll({
+				offset: -80,
+				scrollTarget: $(this).val()
+			});
+			// Waypoints
+			$('.sections').waypoint(  
+				function(direction) {
+					if (direction ==='down') {            
+			    		var wayID = $(this).attr('id');            
+					} else {
+			    		var previous = $(this).prev();
+			    		var wayID = $(previous).attr('id');                    
+					}
+			    	$('.bd-active').removeClass('bd-active');
+			    	$('#nav a[href=#'+wayID+']').parent('li').addClass('bd-active');
+				}, { offset: '40%' });
+
 		});
 	</script>
 </body>
