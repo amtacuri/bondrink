@@ -342,24 +342,7 @@
 				displayingVideo = false;
 				stopVideo();
 			});
-			/*
-			$(".work-us").click(function(e){
-				//e.preventDefault();
-				$("#nav li").removeClass('bd-active');
-				$('html, body').animate({
-			        scrollTop: $("#work-us").offset().top - 95
-			    }, 1000);
-				$(this).parent("li").addClass('bd-active');
-			});
-			$(".home").click(function(e){
-				//e.preventDefault();
-				$("#nav li").removeClass('bd-active');
-				$('html, body').animate({
-			        scrollTop: $("#banner").offset().top - 95
-			    }, 1000);
-				$(this).parent("li").addClass('bd-active');
-			});
-			*/
+			
 			animation1 = function(){
 				$('#pidesbebida').animate({	top: 0, opacity: 1 }, 250);
 				$('#mejoropcion').animate({ top: 0, opacity: 1 }, 500);
@@ -373,16 +356,16 @@
 				$('#disfrutas').animate({ top: -500, opacity: 0 }, 1000);	
 			}
 			animation2 = function(){
-				$('#benefice-img').animate({	top: 0, opacity: 1 }, 250);
+				$('#benefice-img').animate({ opacity: 1 }, 300);
 				$('#rapido').animate({ opacity: 1 }, 500);
-				$('#facil').animate({ opacity: 1 }, 1000);
-				$('#manos').animate({ opacity: 1 }, 1500);	
+				$('#facil').animate({ opacity: 1 }, 800);
+				$('#manos').animate({ opacity: 1 }, 1100);	
 			}
 			animation21 = function(){
-				$('#benefice-img').animate({	top: -500, opacity: 0 }, 500);
-				$('#rapido').animate({ opacity: 0 }, 500);
-				$('#facil').animate({ opacity: 0 }, 500);
-				$('#manos').animate({ opacity: 0 }, 500);	
+				$('#benefice-img').animate({ opacity: 0 }, 100);
+				$('#rapido').animate({ opacity: 0 }, 100);
+				$('#facil').animate({ opacity: 0 }, 100);
+				$('#manos').animate({ opacity: 0 }, 100);	
 			}
 			$('a.smoothScroll').smoothScroll({
 				offset: -80,
@@ -401,12 +384,12 @@
 			    	if (wayID == "work-us"){
 			    		animation1();		
 			    	} else {
-			    		animation11();
+			    		//animation11(1);
 			    	}
 			    	if (wayID == "benefice"){
 			    		animation2();		
 			    	} else {
-			    		animation21();
+			    		//animation21(1);
 			    	}
 			    	$('#nav a[href=#'+wayID+']').parent('li').addClass('bd-active');
 				}, { offset: '40%' }
