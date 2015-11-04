@@ -60,28 +60,28 @@
 				<h1>¿Cómo funciona?</h1>
 			</div>	
 			<div class="row">
-				<div class="col-sm-3">
+				<div class="col-sm-3" id="pidesbebida">
 					<h2>Pides tu bebida</h2>
 					<span>
 						<img src="images/icon_1.png" alt="">	
 					</span>
 					<p>Envias el nombre y la cantidad de la bebida que deseas a través de la aplicación móvil o web.</p>
 				</div>
-				<div class="col-sm-3">
+				<div class="col-sm-3" id="mejoropcion">
 					<h2>Elijes la mejor opción</h2>
 					<span>
 						<img src="images/icon_2.png" alt="">
 					</span>
 					<p>En minutos BonDrink te responde con varias opciones y precios para que escojas la de tu preferencia.</p>
 				</div>
-				<div class="col-sm-3">
+				<div class="col-sm-3" id="tellevamos">
 					<h2>Te la llevamos</h2>
 					<span>
 						<img src="images/icon_3.png" alt="">
 					</span>
 					<p>Uno de nuestros agentes recoge tu pedido y lo lleva rápidamente al lugar que nos indiques.</p>
 				</div>
-				<div class="col-sm-3 bd-last">
+				<div class="col-sm-3 bd-last" id="disfrutas">
 					<h2>La disfrutas</h2>
 					<span>
 						<img src="images/icon_4.png" alt="">
@@ -106,7 +106,7 @@
 				</div>
 				<div class="col-sm-6">
 					<ul class="bd-list-beneficies">
-						<li>
+						<li id="rapido">
 							<div class="bd-left">
 								<span>
 									<img src="images/icon_speed.png" alt="">
@@ -117,7 +117,7 @@
 								<p>Nunca ha existido una manera tan rápida de ordenar una buena bebida a domicilio.</p>
 							</div>
 						</li>
-						<li>
+						<li id="facil">
 							<div class="bd-left">
 								<span>
 									<img src="images/icon_easy.png" alt="">
@@ -128,7 +128,7 @@
 								<p>Como disfrutar tu bebida favorita, unos sencillos pasos y ya está. No más llamadas, no más incertidumbre.</p>
 							</div>
 						</li>
-						<li>
+						<li id="manos">
 							<div class="bd-left">
 								<span>
 									<img src="images/icon_hands_2.png" alt="">
@@ -320,6 +320,7 @@
 		}
 		var menu_activo = false;
 		var displayingVideo = false;
+		var animation1, animation11, animation2, animation21;
 		$(function(){
 			$(".bd-menu").click(function(){
 				if (!menu_activo) {
@@ -359,6 +360,30 @@
 				$(this).parent("li").addClass('bd-active');
 			});
 			*/
+			animation1 = function(){
+				$('#pidesbebida').animate({	top: 0, opacity: 1 }, 250);
+				$('#mejoropcion').animate({ top: 0, opacity: 1 }, 500);
+				$('#tellevamos').animate({ top: 0, opacity: 1 }, 750);
+				$('#disfrutas').animate({ top: 0, opacity: 1 }, 1000);	
+			}
+			animation11 = function(){
+				$('#pidesbebida').animate({	top: -500, opacity: 0 }, 250);
+				$('#mejoropcion').animate({ top: -500, opacity: 0 }, 500);
+				$('#tellevamos').animate({ top: -500, opacity: 0 }, 750);
+				$('#disfrutas').animate({ top: -500, opacity: 0 }, 1000);	
+			}
+			animation2 = function(){
+				$('#benefice-img').animate({	top: 0, opacity: 1 }, 250);
+				$('#rapido').animate({ opacity: 1 }, 500);
+				$('#facil').animate({ opacity: 1 }, 1000);
+				$('#manos').animate({ opacity: 1 }, 1500);	
+			}
+			animation21 = function(){
+				$('#benefice-img').animate({	top: -500, opacity: 0 }, 500);
+				$('#rapido').animate({ opacity: 0 }, 500);
+				$('#facil').animate({ opacity: 0 }, 500);
+				$('#manos').animate({ opacity: 0 }, 500);	
+			}
 			$('a.smoothScroll').smoothScroll({
 				offset: -80,
 				scrollTarget: $(this).val()
@@ -373,9 +398,20 @@
 			    		var wayID = $(previous).attr('id');                    
 					}
 			    	$('.bd-active').removeClass('bd-active');
+			    	if (wayID == "work-us"){
+			    		animation1();		
+			    	} else {
+			    		animation11();
+			    	}
+			    	if (wayID == "benefice"){
+			    		animation2();		
+			    	} else {
+			    		animation21();
+			    	}
 			    	$('#nav a[href=#'+wayID+']').parent('li').addClass('bd-active');
-				}, { offset: '40%' });
-
+				}, { offset: '40%' }
+			);
+			
 		});
 	</script>
 </body>

@@ -489,6 +489,11 @@ body {
 .modal-dialog {
   z-index: 9999 !important;
 }
+#pidesbebida, #tellevamos, #mejoropcion, #disfrutas, #benofice-img {
+  position: relative; top: -500px; opacity: 0;
+}
+#rapido, #facil, #manos { position: relative; opacity: 0; }
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .container {
     width: 100%;
