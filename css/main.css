@@ -1,7 +1,7 @@
 /** mixin */
 /**structure*/
 body {
-  font: bold 14px "Helvetica";
+  font: bold 18px "Helvetica";
 }
 #header {
   min-height: 95px;
@@ -489,11 +489,6 @@ body {
 .modal-dialog {
   z-index: 9999 !important;
 }
-#pidesbebida, #tellevamos, #mejoropcion, #disfrutas, #benofice-img {
-  position: relative; top: -500px; opacity: 0;
-}
-#rapido, #facil, #manos { position: relative; opacity: 0; left:0px; }
-
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .container {
     width: 100%;
@@ -702,8 +697,7 @@ body {
   }
   #benefice .bd-list-beneficies {
     margin: 0;
-    padding: 0; overflow: hidden; 
-    position: relative;
+    padding: 0;
   }
   #benefice .bd-list-beneficies li {
     margin-bottom: 40px;
