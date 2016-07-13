@@ -29,41 +29,23 @@
 							<li><a href="#work-us" class="smoothScroll">¿Cómo funciona?</a></li>
 							<li><a href="#benefice" class="smoothScroll">Trabaja con nosotros</a></li>
 						</ul>
-						
+
 					</nav>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section id="banner" class="sections">
-		<div class="container">
-			<div class="bd-text-banner">
-				<h1>Pide tu bebida desde tu móvil</h1>
-				<p>Olvida tener que ir al mercado, o a la bodega de la esquina cuando quieres<br> 
-					una bebida. BonDrink te lleva desde el café en la mañanas, hasta los tragos<br> 
-					de la noche a domicilio y con los mejores precios.</p>
-				<div class="bd-play">
-					<span data-toggle="modal" data-target=".bs-example-modal-lg">
-						<i class="glyphicon glyphicon-triangle-right"></i>
-					</span>
-				</div>	
-				<div class="bd-download">
-					<a href="#">Descarga APP</a>
-				</div>
-				<p class="bd-font-normal">Pronto en Cuzco y en Trujillo</p>			
-			</div>
-		</div>
-	</section>
+	
 	<section id="work-us" class="sections">
 		<div class="container">
 			<div class="bd-title">
 				<h1>¿Cómo funciona?</h1>
-			</div>	
+			</div>
 			<div class="row">
 				<div class="col-sm-3" id="pidesbebida">
 					<h2>Pides tu bebida</h2>
 					<span>
-						<img src="images/icon_1.png" alt="">	
+						<img src="images/icon_1.png" alt="">
 					</span>
 					<p>Envias el nombre y la cantidad de la bebida que deseas a través de la aplicación móvil o web.</p>
 				</div>
@@ -89,7 +71,7 @@
 					<p>
 						Tu BonDrink llega a tiempo para seguir disfrutando de tus mejores momentos.
 					</p>
-				</div>	
+				</div>
 			</div>
 		</div>
 	</section>
@@ -188,7 +170,7 @@
 					<div class="bd-title">
 						<h1>¡Comienza ahora!</h1>
 					</div>
-					<p>Descarga la aplicación BonDrink para empezar <br>a disfrutar de tus bebidas preferidas a domicilio.</p>	
+					<p>Descarga la aplicación BonDrink para empezar <br>a disfrutar de tus bebidas preferidas a domicilio.</p>
 					<div class="bd-download-app">
 						<a href="#" class="bd-app-store">
 							<span></span>
@@ -198,7 +180,7 @@
 						</a>
 					</div>
 				</div>
-				
+
 			</div>
 		</div>
 	</section>
@@ -279,7 +261,7 @@
 			        <h4 class="modal-title" id="myModalLabel">Video</h4>
 		      	</div>
 	    		<div id="shyp-video">
-	    			
+
 	    		</div>
 	    	</div>
 	  	</div>
@@ -332,7 +314,7 @@
 					$("#header nav ul").slideUp();
 					menu_activo = false;
 				}
-				
+
 			});
 			$(".bd-play span").click(function(){
 				displayingVideo = true;
@@ -342,59 +324,59 @@
 				displayingVideo = false;
 				stopVideo();
 			});
-			
+
 			animation1 = function(){
 				$('#pidesbebida').animate({	top: 0, opacity: 1 }, 250);
 				$('#mejoropcion').animate({ top: 0, opacity: 1 }, 500);
 				$('#tellevamos').animate({ top: 0, opacity: 1 }, 750);
-				$('#disfrutas').animate({ top: 0, opacity: 1 }, 1000);	
+				$('#disfrutas').animate({ top: 0, opacity: 1 }, 1000);
 			}
 			animation11 = function(){
 				$('#pidesbebida').animate({	top: -500, opacity: 0 }, 250);
 				$('#mejoropcion').animate({ top: -500, opacity: 0 }, 500);
 				$('#tellevamos').animate({ top: -500, opacity: 0 }, 750);
-				$('#disfrutas').animate({ top: -500, opacity: 0 }, 1000);	
+				$('#disfrutas').animate({ top: -500, opacity: 0 }, 1000);
 			}
 			animation2 = function(){
 				$('#benefice-img').animate({ opacity: 1 }, 300);
 				$('#rapido').animate({ opacity: 1 }, 500);
 				$('#facil').animate({ opacity: 1 }, 800);
-				$('#manos').animate({ opacity: 1 }, 1100);	
+				$('#manos').animate({ opacity: 1 }, 1100);
 			}
 			animation21 = function(){
 				$('#benefice-img').animate({ opacity: 0 }, 100);
 				$('#rapido').animate({ opacity: 0 }, 100);
 				$('#facil').animate({ opacity: 0 }, 100);
-				$('#manos').animate({ opacity: 0 }, 100);	
+				$('#manos').animate({ opacity: 0 }, 100);
 			}
 			$('a.smoothScroll').smoothScroll({
 				offset: -80,
 				scrollTarget: $(this).val()
 			});
 			// Waypoints
-			$('.sections').waypoint(  
+			$('.sections').waypoint(
 				function(direction) {
-					if (direction ==='down') {            
-			    		var wayID = $(this).attr('id');            
+					if (direction ==='down') {
+			    		var wayID = $(this).attr('id');
 					} else {
 			    		var previous = $(this).prev();
-			    		var wayID = $(previous).attr('id');                    
+			    		var wayID = $(previous).attr('id');
 					}
 			    	$('.bd-active').removeClass('bd-active');
 			    	if (wayID == "work-us"){
-			    		animation1();		
+			    		animation1();
 			    	} else {
 			    		//animation11(1);
 			    	}
 			    	if (wayID == "benefice"){
-			    		animation2();		
+			    		animation2();
 			    	} else {
 			    		//animation21(1);
 			    	}
 			    	$('#nav a[href=#'+wayID+']').parent('li').addClass('bd-active');
 				}, { offset: '40%' }
 			);
-			
+
 		});
 	</script>
 </body>
